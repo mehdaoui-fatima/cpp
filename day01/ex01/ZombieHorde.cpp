@@ -1,19 +1,25 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   newZombie.cpp                                      :+:      :+:    :+:   */
+/*   ZombieHorde.cpp                                    :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: fmehdaou <fmehdaou@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2021/07/14 15:19:57 by fmehdaou          #+#    #+#             */
-/*   Updated: 2021/07/14 17:36:32 by fmehdaou         ###   ########.fr       */
+/*   Created: 2021/07/15 09:48:09 by fmehdaou          #+#    #+#             */
+/*   Updated: 2021/07/15 12:20:39 by fmehdaou         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "Zombie.hpp"
 
-Zombie* newZombie(std::string name)
+Zombie* zombieHorde( int N, std::string name )
 {
-    Zombie *zombie = new Zombie(name);
-    return (zombie);
+    Zombie *zombies = new Zombie[N];
+
+    for (int i = 0; i < N; i++)
+    {
+        zombies[i].setName(name);
+        std::cout << "Zombie " << zombies[i].getName() << " created"<< std::endl;
+    }    
+    return zombies;
 }
