@@ -28,9 +28,9 @@ void    replace(std::string filename, std::string s1, std::string s2)
     int n;
 
     ifs.open(filename);
-    if (!ifs.is_open()|| s1.empty() || s2.empty())
+    if (!ifs.is_open() || s1.empty() || s2.empty())
     {
-        std::cout << "file must exist, s1 and s2 should not be empty" << std::endl;
+        std::cout << "file must exist, s1 and s2 should not be empty";
         return;
     }
     else
@@ -59,7 +59,7 @@ void    replace(std::string filename, std::string s1, std::string s2)
 }
 
 
-int main(int c, char **argv)
+int main()
 {
     std::string filename = "numbers";
     std::string s1 = "hi";

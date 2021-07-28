@@ -5,22 +5,19 @@
 /*                                                    +:+ +:+         +:+     */
 /*   By: fmehdaou <fmehdaou@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2021/07/15 12:22:37 by fmehdaou          #+#    #+#             */
-/*   Updated: 2021/07/15 14:59:32 by fmehdaou         ###   ########.fr       */
+/*   Created: 2021/07/28 13:56:23 by fmehdaou          #+#    #+#             */
+/*   Updated: 2021/07/28 14:35:48 by fmehdaou         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <iostream>
-#include <string>
+#include "karen.hpp"
 
 int main()
 {
-    std::string name = "HI THIS IS BRAIN";
-    std::string* stringPTR =  &name;
-    std::string& stringREF =  name;
+    Karen karen;
     
-    std::cout << &name <<std::endl;
-    std::cout << stringPTR << std::endl;
-    std::cout << &stringREF << std::endl;
-    
+    karen.complain("info");
+    karen.complain("debug");
+    karen.complain("warning");
+    karen.complain("error");
 }

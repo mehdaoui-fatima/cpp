@@ -5,15 +5,17 @@
 #                                                     +:+ +:+         +:+      #
 #    By: fmehdaou <fmehdaou@student.42.fr>          +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
-#    Created: 2021/07/15 12:22:32 by fmehdaou          #+#    #+#              #
-#    Updated: 2021/07/15 14:25:01 by fmehdaou         ###   ########.fr        #
+#    Created: 2021/07/28 11:26:06 by fmehdaou          #+#    #+#              #
+#    Updated: 2021/07/28 11:26:25 by fmehdaou         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
-NAME			= brain
+NAME			= karen
 
-SRCS			=  main.cpp \
-				  
+SRCS			=   main.cpp  \
+					karen.cpp \
+
+		  
 OBJS			= $(SRCS:.cpp=.o)
 
 FLAGS			= -Wall -Wextra -Werror 
