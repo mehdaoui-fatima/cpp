@@ -6,13 +6,11 @@
 /*   By: fmehdaou <fmehdaou@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/07/28 13:56:57 by fmehdaou          #+#    #+#             */
-/*   Updated: 2021/07/28 14:34:06 by fmehdaou         ###   ########.fr       */
+/*   Updated: 2021/07/29 15:13:05 by fmehdaou         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-
-#include "Karen.hpp"
-
+#include "karen.hpp"
 
 void Karen::debug(void){
     
@@ -39,6 +37,17 @@ void Karen::error(void){
     std::cout << "This is unacceptable, I want to speak to the manager now.";
 }
 
-void complain(std::string level){
-    
-}
+void Karen::complain(std::string level){
+
+    int res;
+
+    res = -1;
+    f tab_fun[] = {&Karen::debug, &Karen::info, &Karen::warning, &Karen::error};
+    std::string levels[4] = {"debug", "info", "warning", "error"};
+    for (int i = 0; i< 4; i++)
+    {
+        if (level == levels[i])
+            (this->*tab_fun[i])();
+    }
+};
+
