@@ -5,25 +5,32 @@
 /*                                                    +:+ +:+         +:+     */
 /*   By: fmehdaou <fmehdaou@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2021/08/31 16:08:15 by fmehdaou          #+#    #+#             */
-/*   Updated: 2021/09/05 14:02:26 by fmehdaou         ###   ########.fr       */
+/*   Created: 2021/08/31 18:21:14 by fmehdaou          #+#    #+#             */
+/*   Updated: 2021/09/01 16:51:09 by fmehdaou         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-
 #include <iostream>
-
+#include <cmath>
 
 class Fixed {
-    private:
+        private:
         int fixedPoint;
         static int const fractionalBits = 8;
 
     public:
-        Fixed( void ); 
-        Fixed( Fixed const &old_obj );
-        Fixed & operator=( Fixed const & rhs );
-        int getRawBits( void ) const;
-        void setRawBits( int const raw ); 
+        Fixed(void);
+        Fixed(int const value);
+        Fixed(float fvalue);
+        Fixed(Fixed const &old_obj);
+        Fixed & operator=(Fixed const & rhs);
+        int getRawBits(void) const;
+        void setRawBits(int const raw); 
+        float toFloat( void ) const;
+        int toInt( void ) const; 
         ~Fixed(void);
 };
+
+
+std::ostream & operator<<(std::ostream & o, Fixed const &rhs);
+
