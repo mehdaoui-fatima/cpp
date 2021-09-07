@@ -6,7 +6,7 @@
 /*   By: fmehdaou <fmehdaou@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/08/31 18:21:14 by fmehdaou          #+#    #+#             */
-/*   Updated: 2021/09/05 13:52:21 by fmehdaou         ###   ########.fr       */
+/*   Updated: 2021/09/07 18:54:15 by fmehdaou         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,7 +14,8 @@
 #include <cmath>
 
 class Fixed {
-        private:
+
+    private:
         int fixedPoint;
         static int const fractionalBits = 8;
 
@@ -28,24 +29,23 @@ class Fixed {
         void setRawBits(int const raw); 
         float toFloat( void ) const;
         int toInt( void ) const; 
-        ~Fixed(void);
-        Fixed&  operator++(); // ++a prefix operator
+        Fixed&  operator++(void); // ++a prefix operator
+        Fixed&  operator--(void); // --a 
         Fixed   operator++(int); // a++ postfix operator 
         Fixed   operator--(int); // a--
         Fixed   operator*(Fixed rhs); //* operator
-        Fixed   operator-(Fixed& rhs) const; //-
-        Fixed   operator/(Fixed& rhs) const ; // /
-        Fixed   operator+(Fixed& tmp)  const; //+
+        Fixed   operator-(Fixed rhs) const; //-
+        Fixed   operator/(Fixed rhs) const ; // /
+        Fixed   operator+(Fixed tmp)  const; //+
         bool    operator==(Fixed const &rhs) const;
         bool    operator!=(Fixed const &rhs) const;
-        // bool    operator>(Fixed const &rhs) const;
+        bool    operator>(Fixed const &rhs) const;
         bool    operator<(Fixed const &rhs) const;
         bool    operator>=(Fixed const &rhs) const;
         bool    operator<=(Fixed const &rhs) const;
         static  Fixed const &max(Fixed const &a, Fixed const &b);
         static  Fixed const &min(Fixed const &a, Fixed const &b);
+        ~Fixed(void);
 };
 
-
 std::ostream & operator<<(std::ostream & o, Fixed const &rhs);
-

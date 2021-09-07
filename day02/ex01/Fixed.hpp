@@ -6,7 +6,7 @@
 /*   By: fmehdaou <fmehdaou@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/08/31 18:21:14 by fmehdaou          #+#    #+#             */
-/*   Updated: 2021/09/01 16:51:09 by fmehdaou         ###   ########.fr       */
+/*   Updated: 2021/09/07 14:53:26 by fmehdaou         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,7 +14,8 @@
 #include <cmath>
 
 class Fixed {
-        private:
+
+    private:
         int fixedPoint;
         static int const fractionalBits = 8;
 
@@ -30,7 +31,6 @@ class Fixed {
         int toInt( void ) const; 
         ~Fixed(void);
 };
-
 
 std::ostream & operator<<(std::ostream & o, Fixed const &rhs);
 

@@ -6,7 +6,7 @@
 /*   By: fmehdaou <fmehdaou@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/09/01 16:32:11 by fmehdaou          #+#    #+#             */
-/*   Updated: 2021/09/01 16:34:16 by fmehdaou         ###   ########.fr       */
+/*   Updated: 2021/09/07 15:38:01 by fmehdaou         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,8 +15,7 @@
 #include <iostream>
 #include "Fixed.hpp"
 
-int main( void ) 
-{
+int main( void ) {
     Fixed a;
     Fixed const b( 10 );
     Fixed const c( 42.42f );
