@@ -6,7 +6,7 @@
 /*   By: fmehdaou <fmehdaou@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/09/02 14:37:36 by fmehdaou          #+#    #+#             */
-/*   Updated: 2021/09/07 18:58:45 by fmehdaou         ###   ########.fr       */
+/*   Updated: 2021/09/07 19:28:50 by fmehdaou         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -28,7 +28,7 @@ int main( void ) {
     std::cout << a * b << std::endl;
     std::cout << a - b << std::endl;
     std::cout << a + b << std::endl;
-    std::cout << b / a << std::endl;
+    std::cout << 10.16 / 0.0000001 << std::endl;
     std::cout << b - a << std::endl;
     std::cout << a + b << std::endl;
     std::cout << b / a << std::endl;

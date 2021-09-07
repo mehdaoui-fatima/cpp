@@ -6,7 +6,7 @@
 /*   By: fmehdaou <fmehdaou@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/09/02 14:36:43 by fmehdaou          #+#    #+#             */
-/*   Updated: 2021/09/07 18:54:11 by fmehdaou         ###   ########.fr       */
+/*   Updated: 2021/09/07 19:28:05 by fmehdaou         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -122,32 +122,32 @@ Fixed   Fixed::operator+(Fixed  rhs) const
 
 bool    Fixed::operator==(Fixed const &rhs) const
 {
-    return (this->fixedPoint == rhs.fixedPoint);
+    return (this->toFloat() == rhs.toFloat());
 }
 
 bool    Fixed::operator!=(Fixed const &rhs) const
 {
-    return (this->fixedPoint != rhs.fixedPoint);
+     return (this->toFloat() != rhs.toFloat());
 }
 
 bool    Fixed::operator>(Fixed const &rhs) const
 {
-    return (this->fixedPoint > rhs.fixedPoint);
+    return (this->toFloat() > rhs.toFloat());
 }
 
 bool    Fixed::operator<(Fixed const &rhs) const
 {
-    return (this->fixedPoint < rhs.fixedPoint);
+    return (this->toFloat() < rhs.toFloat());
 }
 
 bool    Fixed::operator>=(Fixed const &rhs) const
 {
-    return (this->fixedPoint >= rhs.fixedPoint);
+    return (this->toFloat() >= rhs.toFloat());
 }
 
 bool    Fixed::operator<=(Fixed const &rhs) const
 {
-    return (this->fixedPoint <= rhs.fixedPoint);
+    return (this->toFloat() <= rhs.toFloat());
 }
 
 Fixed const &Fixed::max(Fixed const &a, Fixed const &b)
