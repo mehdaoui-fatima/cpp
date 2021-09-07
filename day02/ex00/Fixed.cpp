@@ -6,7 +6,7 @@
 /*   By: fmehdaou <fmehdaou@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/08/31 16:08:08 by fmehdaou          #+#    #+#             */
-/*   Updated: 2021/09/05 14:00:36 by fmehdaou         ###   ########.fr       */
+/*   Updated: 2021/09/07 11:37:18 by fmehdaou         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -21,7 +21,8 @@ Fixed::Fixed(void)
 Fixed::Fixed( Fixed const &old_obj )
 {
     std::cout << "Copy constructor called" << std::endl;
-    *this = old_obj;
+    this->fixedPoint = old_obj.fixedPoint;
+    
 }
 
 int Fixed::getRawBits( void ) const

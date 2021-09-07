@@ -6,7 +6,7 @@
 /*   By: fmehdaou <fmehdaou@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/08/31 16:08:19 by fmehdaou          #+#    #+#             */
-/*   Updated: 2021/08/31 16:10:51 by fmehdaou         ###   ########.fr       */
+/*   Updated: 2021/09/07 11:02:52 by fmehdaou         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,7 +17,7 @@ int main( void )
 {
 
     Fixed a;
-    Fixed b( a );
+    Fixed b( a ); // 
     Fixed c;
     
     c = b;
