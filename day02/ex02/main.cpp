@@ -6,7 +6,7 @@
 /*   By: fmehdaou <fmehdaou@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/09/02 14:37:36 by fmehdaou          #+#    #+#             */
-/*   Updated: 2021/09/07 19:28:50 by fmehdaou         ###   ########.fr       */
+/*   Updated: 2021/09/08 09:44:06 by fmehdaou         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,32 +19,32 @@ int main( void ) {
     
     std::cout << a << std::endl;
     std::cout << ++a << std::endl;
+    std::cout << ++a << std::endl;
     std::cout << a << std::endl;
     std::cout << a++ << std::endl;
+    std::cout << a-- << std::endl;
     std::cout << a << std::endl;
     std::cout << b << std::endl;
     std::cout << Fixed::max(a, b) << std::endl;
     std::cout << Fixed::min(a, b) << std::endl;
-    std::cout << a * b << std::endl;
-    std::cout << a - b << std::endl;
-    std::cout << a + b << std::endl;
-    std::cout << 10.16 / 0.0000001 << std::endl;
-    std::cout << b - a << std::endl;
-    std::cout << a + b << std::endl;
-    std::cout << b / a << std::endl;
+    std::cout << a * b  << "||" << (5.05f * 2 ) *  0.000000 << std::endl;
+    std::cout << a - b <<  "||" <<  0 - (5.05f * 2 ) << std::endl;
+    std::cout << a + b << "||" <<  0 + (5.05f * 2 ) << std::endl;
+    std::cout << a / b << "||" <<  0 / (5.05f * 2 )<< std::endl;
+    std::cout << b - a << "||" <<  (5.05f * 2 ) - 0 << std::endl;;
     std::cout << a-- << std::endl;
     std::cout << --a << std::endl;
     if ( a > b)
         std::cout << a << std::endl;
     if ( a < b)
-        std::cout << a << std::endl;
+        std::cout << b << std::endl;
     if (a >= b)
         std::cout << a << std::endl;
     if (a <= b)
-        std::cout << a << std::endl;
+        std::cout << b << std::endl;
     if (a == b)
-        std::cout << a << std::endl;
+        std::cout << b << std::endl;
     if (a != b)
-        std::cout << a << std::endl;
+        std::cout << b << std::endl;
     return 0;
 }
