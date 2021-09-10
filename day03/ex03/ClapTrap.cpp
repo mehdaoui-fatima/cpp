@@ -6,7 +6,7 @@
 /*   By: fmehdaou <fmehdaou@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/09/08 16:31:14 by fmehdaou          #+#    #+#             */
-/*   Updated: 2021/09/10 16:55:50 by fmehdaou         ###   ########.fr       */
+/*   Updated: 2021/09/10 18:38:06 by fmehdaou         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,7 +18,7 @@ ClapTrap::ClapTrap(void){
 
 ClapTrap::ClapTrap(std::string name)
 {
-    this->name = name + "_clap_name"; //REVIEW
+    this->name = name; //REVIEW
     this->hitpoints = 10;
     this->energy = 10;
     this->damage = 0;

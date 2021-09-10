@@ -6,7 +6,7 @@
 /*   By: fmehdaou <fmehdaou@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/09/10 15:01:43 by fmehdaou          #+#    #+#             */
-/*   Updated: 2021/09/10 17:32:51 by fmehdaou         ###   ########.fr       */
+/*   Updated: 2021/09/10 18:38:13 by fmehdaou         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -20,6 +20,7 @@ DiamondTrap::DiamondTrap(void)
 
 DiamondTrap::DiamondTrap(std::string name)
 {
+    ClapTrap::name = name + "_clap_name";
     this->name = name;
     this->hitpoints = FragTrap::hitpoints;
     this->energy = DiamondTrap::energy;
@@ -57,6 +58,14 @@ void DiamondTrap::beRepaired(unsigned int amount)
 {
      std::cout << "DiamondTrap " <<this->name << " is repaired" << std::endl;
 }
+
+
+void DiamondTrap::whoAmI()
+{
+    std::cout << "DiamondTrap " << this->name;
+    std::cout << " has a clapTrap with the name " << ClapTrap::name << std::endl;
+}
+
 
 DiamondTrap::~DiamondTrap(void)
 {
