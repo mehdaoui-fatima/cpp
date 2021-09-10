@@ -6,16 +6,17 @@
 #    By: fmehdaou <fmehdaou@student.42.fr>          +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2021/09/09 11:25:15 by fmehdaou          #+#    #+#              #
-#    Updated: 2021/09/10 11:22:14 by fmehdaou         ###   ########.fr        #
+#    Updated: 2021/09/10 11:54:53 by fmehdaou         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
 
-NAME			= ScavTrap
+NAME			= FragTrap
 
 SRCS			=   main.cpp  \
 					ScavTrap.cpp \
-					ClapTrap.cpp 
+					ClapTrap.cpp \
+					FragTrap.cpp
 					
 					
 		  
