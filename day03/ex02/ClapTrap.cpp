@@ -6,13 +6,14 @@
 /*   By: fmehdaou <fmehdaou@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/09/08 16:31:14 by fmehdaou          #+#    #+#             */
-/*   Updated: 2021/09/10 11:37:43 by fmehdaou         ###   ########.fr       */
+/*   Updated: 2021/09/11 10:46:58 by fmehdaou         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "ClapTrap.hpp"
 
-ClapTrap::ClapTrap(void){
+ClapTrap::ClapTrap(void)
+{
     std::cout << "Default constructor called, from ClapTrap" << std::endl;  
 }
 
@@ -33,7 +34,7 @@ ClapTrap::ClapTrap(ClapTrap const  &old_obj)
 
 ClapTrap& ClapTrap::operator=(ClapTrap const &rhs)
 {
-    std::cout << "assignation operator called" << std::endl;
+    std::cout << "Assignation operator called" << std::endl;
     if (this != &rhs)
     {
         this->name = rhs.name;
@@ -84,6 +85,6 @@ unsigned int ClapTrap::getdamage(void)
 
 ClapTrap::~ClapTrap(void){
     
-    std::cout << "destructor called from ClapTrap" << std::endl;
+    std::cout << "Destructor called from ClapTrap" << std::endl;
     return ;
 }

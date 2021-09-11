@@ -6,7 +6,7 @@
 /*   By: fmehdaou <fmehdaou@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/09/09 09:50:28 by fmehdaou          #+#    #+#             */
-/*   Updated: 2021/09/09 16:36:56 by fmehdaou         ###   ########.fr       */
+/*   Updated: 2021/09/11 10:16:57 by fmehdaou         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,9 +15,9 @@
 
 int main()
 {
-    ClapTrap a("mort");
-    ClapTrap b("crawly");
-    ClapTrap c("dead");
+    ClapTrap a("Cmort");
+    ClapTrap b("Crawly");
+    ClapTrap c("Cdead");
     ClapTrap d(a);
 
     b.attack(a.getname()); 

@@ -6,10 +6,9 @@
 #    By: fmehdaou <fmehdaou@student.42.fr>          +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2021/09/09 11:25:15 by fmehdaou          #+#    #+#              #
-#    Updated: 2021/09/10 11:54:53 by fmehdaou         ###   ########.fr        #
+#    Updated: 2021/09/11 10:45:38 by fmehdaou         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
-
 
 NAME			= FragTrap
 
@@ -17,9 +16,7 @@ SRCS			=   main.cpp  \
 					ScavTrap.cpp \
 					ClapTrap.cpp \
 					FragTrap.cpp
-					
-					
-		  
+					  
 OBJS			= $(SRCS:.cpp=.o)
 
 FLAGS			= -Wall -Wextra -Werror 

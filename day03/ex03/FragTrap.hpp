@@ -6,7 +6,7 @@
 /*   By: fmehdaou <fmehdaou@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/09/10 11:45:41 by fmehdaou          #+#    #+#             */
-/*   Updated: 2021/09/10 16:51:42 by fmehdaou         ###   ########.fr       */
+/*   Updated: 2021/09/11 11:10:44 by fmehdaou         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -23,7 +23,7 @@ class FragTrap : virtual public ClapTrap {
         FragTrap(std::string name);
         FragTrap(FragTrap const &old_obj);
         FragTrap & operator=(FragTrap const &rhs);
-        void attack(std::string const & target);
+        void attack(std::string const &target);
         void takeDamage(unsigned int amount);
         void beRepaired(unsigned int amount);
         void highFivesGuys(void);

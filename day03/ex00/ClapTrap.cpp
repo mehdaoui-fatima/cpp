@@ -6,13 +6,14 @@
 /*   By: fmehdaou <fmehdaou@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/09/08 16:31:14 by fmehdaou          #+#    #+#             */
-/*   Updated: 2021/09/09 18:13:24 by fmehdaou         ###   ########.fr       */
+/*   Updated: 2021/09/11 10:16:55 by fmehdaou         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "ClapTrap.hpp"
 
-ClapTrap::ClapTrap(void){
+ClapTrap::ClapTrap(void)
+{
     std::cout << "Default constructor called, from ClapTrap" << std::endl;  
 }
 
@@ -25,14 +26,15 @@ ClapTrap::ClapTrap(std::string name)
     std::cout << "ClapTrap " << this->name << " created!" << std::endl;
 }
 
-ClapTrap::ClapTrap(ClapTrap const  &old_obj){
+ClapTrap::ClapTrap(ClapTrap const  &old_obj)
+{
     std::cout << "copy constructor called" << std::endl ;
     (*this) = old_obj; 
 }
 
 ClapTrap& ClapTrap::operator=(ClapTrap const &rhs)
 {
-    std::cout << "assignation operator called" << std::endl;
+    std::cout << "Assignation operator called" << std::endl;
     if (this != &rhs)
     {
         this->name = rhs.name;
@@ -63,25 +65,26 @@ void ClapTrap::beRepaired(unsigned int amount)
 
 std::string ClapTrap::getname(void)
 {
-    return this->name;
+    return (this->name);
 }
+
 unsigned int ClapTrap::gethitpoints(void)
 {
-    return this->hitpoints;
+    return (this->hitpoints);
 }
 
 unsigned int ClapTrap::getenergy(void)
 {
-    return this->energy;
+    return (this->energy);
 }
 
 unsigned int ClapTrap::getdamage(void)
 {
-    return this->damage;
+    return (this->damage);
 }
 
-ClapTrap::~ClapTrap(void){
-    
-    std::cout << "destructor called from ClapTrap" << std::endl;
+ClapTrap::~ClapTrap(void)
+{
+    std::cout << "Destructor called from ClapTrap" << std::endl;
     return ;
 }
