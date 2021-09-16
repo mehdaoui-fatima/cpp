@@ -5,26 +5,19 @@
 #                                                     +:+ +:+         +:+      #
 #    By: fmehdaou <fmehdaou@student.42.fr>          +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
-#    Created: 2021/09/14 12:44:46 by fmehdaou          #+#    #+#              #
-#    Updated: 2021/09/16 11:48:57 by fmehdaou         ###   ########.fr        #
+#    Created: 2021/09/16 12:57:19 by fmehdaou          #+#    #+#              #
+#    Updated: 2021/09/16 12:58:04 by fmehdaou         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
 
-NAME			= Animal
+NAME			= Materia
 
-HEADERS			=   Animal.hpp \
-					Dog.hpp \
-					WrongAnimal.hpp \
-					WrongCat.hpp \
-					Cat.hpp \
+HEADERS 		=  
+					
 
-SRCS			=   main.cpp  \
-					Animal.cpp \
-					Dog.cpp \
-					WrongAnimal.cpp \
-					WrongCat.cpp \
-					Cat.cpp \
+SRCS			=   main.cpp 
+
 		  
 OBJS			= $(SRCS:.cpp=.o)
 
