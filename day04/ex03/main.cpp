@@ -6,13 +6,15 @@
 /*   By: fmehdaou <fmehdaou@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/09/16 12:58:09 by fmehdaou          #+#    #+#             */
-/*   Updated: 2021/09/16 17:46:07 by fmehdaou         ###   ########.fr       */
+/*   Updated: 2021/09/20 17:20:59 by fmehdaou         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "AMateria.hpp"
 #include "Character.hpp"
-#include "ICharacter.hpp"
+#include "Cure.hpp"
+#include "Ice.hpp"
+#include "MateriaSource.hpp"
 
 int main()
 {
@@ -32,4 +34,5 @@ int main()
     delete me;
     delete src;
     return 0;
+   
 }

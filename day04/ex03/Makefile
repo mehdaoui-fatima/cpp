@@ -6,17 +6,28 @@
 #    By: fmehdaou <fmehdaou@student.42.fr>          +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2021/09/16 12:57:19 by fmehdaou          #+#    #+#              #
-#    Updated: 2021/09/16 12:58:04 by fmehdaou         ###   ########.fr        #
+#    Updated: 2021/09/20 15:05:43 by fmehdaou         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
 
-NAME			= Materia
+NAME			= a.out
 
-HEADERS 		=  
+HEADERS 		=  AMateria.hpp \
+				   Cure.hpp \
+				   Ice.hpp \
+				   Character.hpp \
+				   ICharacter.hpp \
+				   MateriaSource.hpp \
+				   IMateriaSource.hpp 
 					
 
-SRCS			=   main.cpp 
+SRCS			=   main.cpp \
+					AMateria.cpp \
+					Cure.cpp \
+				    Ice.cpp \
+					Character.cpp \
+					MateriaSource.cpp
 
 		  
 OBJS			= $(SRCS:.cpp=.o)

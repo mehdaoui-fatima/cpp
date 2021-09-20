@@ -6,7 +6,7 @@
 /*   By: fmehdaou <fmehdaou@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/09/16 14:03:41 by fmehdaou          #+#    #+#             */
-/*   Updated: 2021/09/16 18:45:35 by fmehdaou         ###   ########.fr       */
+/*   Updated: 2021/09/20 10:57:52 by fmehdaou         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -25,4 +25,4 @@ class Cure : public AMateria{
         ~Cure(void); 
 };
 
-#endif;
+#endif

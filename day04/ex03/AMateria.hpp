@@ -6,7 +6,7 @@
 /*   By: fmehdaou <fmehdaou@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/09/16 13:01:18 by fmehdaou          #+#    #+#             */
-/*   Updated: 2021/09/16 17:47:59 by fmehdaou         ###   ########.fr       */
+/*   Updated: 2021/09/20 16:18:07 by fmehdaou         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,6 +15,8 @@
 #include <iostream>
 #include <string>
 #include "ICharacter.hpp"
+
+class ICharacter;
 
 class AMateria
 {
@@ -32,4 +34,4 @@ class AMateria
 		~AMateria(void);
 };
 
-#endif;
+#endif

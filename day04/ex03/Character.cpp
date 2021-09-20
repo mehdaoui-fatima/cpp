@@ -6,7 +6,7 @@
 /*   By: fmehdaou <fmehdaou@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/09/16 15:43:00 by fmehdaou          #+#    #+#             */
-/*   Updated: 2021/09/16 19:08:40 by fmehdaou         ###   ########.fr       */
+/*   Updated: 2021/09/20 17:03:51 by fmehdaou         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,31 +14,29 @@
 
 Character::Character(void)
 {
-    std::cout << "Character default constructor called" << std::endl;
     this->name = "";
-    for(int i = 0; i < 4; i++)
-        this->m[i] =  NULL;
+    this->index = 0;
 }
 
 Character::Character(std::string name)
 {
-    std::cout << "Character constructor called" << std::endl;
     this->name = name;
-    for(int i = 0; i < 4; i++)
-        this->m[i] =  NULL;
+    this->index = 0;
 }
 
 Character::Character(Character const &character)
 {
-     std::cout << "Character copy constructor called" << std::endl;
-     *this = character;
+    *this = character;
 }
 
 Character& Character::operator=(Character const &character)
 {
-    std::cout << "Character assignment operator called" << std::endl;
     if (this != &character)
-        this->name = name;
+    {
+        this->name = character.name;
+        for(int i = 0; i < 4; i++)
+            this->inventory[i] = character.inventory[i];
+    }  
     return (*this);
 }
 
@@ -49,37 +47,34 @@ std::string const & Character::getName() const
 
 void Character::equip(AMateria* m)
 {
-    for (int i = 0; i < 4; i++)
-    {
-        if (this->m[i] == NULL)
-        {
-            this->m[i] = m;
-            break ;
-        }
-    }
+    if (this->index > 3)
+        std::cout << "Full inventory" << std::endl;
+    else
+        this->inventory[this->index++] = m;
+   
 }
 
 void Character::unequip(int idx)
 {
     int i;
 
-    if (idx < 0 || idx > 3)
+    if (idx < 0  || idx >= this->index)
+        std::cout << "index out of range!" << std::endl;
+    else 
     {
-         std::cout << "index out of range!" << std::endl;
-         return ;
+        this->inventory[idx] =  NULL;
+        for(i = idx; i < this->index; i++)
+            inventory[i] = inventory[i + 1];
+        this->index--;
     }
-    this->m[idx] =  NULL;
-    for(i = idx; i < 3; i++)
-        m[i] = m[i + 1];
-    m[i] = NULL;
 }
 
-void Character::use(int idx, Character& target)
+void Character::use(int idx, ICharacter& target)
 {
-    this->m[idx]->use(target);
+    if (idx < 0 || idx >= index)
+        std::cout << "index out of range!!" << std::endl;
+    else
+        this->inventory[idx]->use(target);
 }
 
-
-Character::~Character() {
-
-}
+Character::~Character() {}

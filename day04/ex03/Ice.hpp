@@ -6,7 +6,7 @@
 /*   By: fmehdaou <fmehdaou@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/09/16 13:48:29 by fmehdaou          #+#    #+#             */
-/*   Updated: 2021/09/16 18:46:24 by fmehdaou         ###   ########.fr       */
+/*   Updated: 2021/09/20 14:57:01 by fmehdaou         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -25,4 +25,4 @@ class Ice : public AMateria{
         ~Ice(void); 
 };
 
-#endif;
+#endif

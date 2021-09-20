@@ -6,7 +6,7 @@
 /*   By: fmehdaou <fmehdaou@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/09/16 13:48:19 by fmehdaou          #+#    #+#             */
-/*   Updated: 2021/09/16 18:46:21 by fmehdaou         ###   ########.fr       */
+/*   Updated: 2021/09/20 16:21:32 by fmehdaou         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,21 +15,17 @@
 
 Ice::Ice(void)
 {
-    std::cout << "Default Ice constructor called" << std::endl;
     this->type = "ice";
 }
 
 Ice::Ice(Ice const & ice)
 {
-    std::cout << "Ice copy constructor called" << std::endl;
     *this = ice;
 }
 
 Ice& Ice::operator=(Ice const & ice)
 {
-    std::cout << "Ice assignment operator called" << std::endl;
-    if (this != &ice)
-        this->type = ice.type;
+    ice.getType();
     return (*this);
 }
 
