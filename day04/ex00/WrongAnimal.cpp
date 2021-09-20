@@ -19,19 +19,19 @@ WrongAnimal::WrongAnimal(void)
 
 WrongAnimal::WrongAnimal(std::string type)
 {
-    std::cout << "Constractor called!" << std::endl;
+    std::cout << "WrongAnimal constractor called!" << std::endl;
     this->type = type;
 }
 
 WrongAnimal::WrongAnimal(WrongAnimal const &old_obj)
 {
-    std::cout << "Copy constructor called" << std::endl;
+    std::cout << "WrongAnimal copy constructor called" << std::endl;
     (*this) = old_obj;
 }
 
 WrongAnimal& WrongAnimal::operator=(WrongAnimal const &wrongAnimal)
 {
-    std::cout << "Assignation operator called!" << std::endl;
+    std::cout << "WrongAnimal assignation operator called!" << std::endl;
     if (this != &wrongAnimal)
         this->type = wrongAnimal.type;
     return *this;
@@ -51,4 +51,3 @@ WrongAnimal::~WrongAnimal(void)
 {
     std::cout << "Destructor called" << std::cout;
 }
-

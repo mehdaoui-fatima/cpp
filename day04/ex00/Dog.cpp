@@ -6,7 +6,7 @@
 /*   By: fmehdaou <fmehdaou@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/09/14 12:04:57 by fmehdaou          #+#    #+#             */
-/*   Updated: 2021/09/14 15:29:40 by fmehdaou         ###   ########.fr       */
+/*   Updated: 2021/09/20 18:44:07 by fmehdaou         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -20,19 +20,19 @@ Dog::Dog(void)
 
 Dog::Dog(std::string type)
 {
-    std::cout << "Constructor called" << std::endl;
+    std::cout << "Dog constructor called" << std::endl;
     this->type = type;
 }
 
 Dog::Dog(Dog const &old_obj)
 {
-    std::cout << "Copy constructor" << std::endl;
+    std::cout << "Dog copy constructor" << std::endl;
     (*this) = old_obj;
 }
 
 Dog& Dog::operator=(Dog const &dog)
 {
-    std::cout << "Assignation operator called" << std::endl; 
+    std::cout << "Dog assignation operator called" << std::endl; 
     if(this != &dog)
         this->type = dog.type;
     return (*this);
@@ -45,5 +45,5 @@ void    Dog::makeSound(void) const
 
 Dog::~Dog(void)
 {
-    std::cout << "Destructor called" << std::endl;
+    std::cout << "Dog destructor called" << std::endl;
 }

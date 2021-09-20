@@ -6,7 +6,7 @@
 /*   By: fmehdaou <fmehdaou@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/09/13 17:29:34 by fmehdaou          #+#    #+#             */
-/*   Updated: 2021/09/14 15:29:32 by fmehdaou         ###   ########.fr       */
+/*   Updated: 2021/09/20 18:35:27 by fmehdaou         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -51,4 +51,3 @@ Animal::~Animal(void)
 {
     std::cout << "Destructor called" << std::cout;
 }
-
