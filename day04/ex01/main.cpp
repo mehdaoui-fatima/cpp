@@ -6,7 +6,7 @@
 /*   By: fmehdaou <fmehdaou@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/09/14 12:43:42 by fmehdaou          #+#    #+#             */
-/*   Updated: 2021/09/16 11:51:44 by fmehdaou         ###   ########.fr       */
+/*   Updated: 2021/09/21 11:22:28 by fmehdaou         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,15 +17,9 @@
 
 int main() 
 {
-    int sz = 4;
+    int sz = 2;
     Animal *animals[sz];
 
-    // Dog d1;
-    // {
-    //     Dog tmp;
-    //     tmp = d1;
-    // }
-    
     for(int i = 0; i < sz; i++)
     {
         if (i % 2 == 0)

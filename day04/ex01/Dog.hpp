@@ -6,7 +6,7 @@
 /*   By: fmehdaou <fmehdaou@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/09/14 11:59:30 by fmehdaou          #+#    #+#             */
-/*   Updated: 2021/09/16 10:18:31 by fmehdaou         ###   ########.fr       */
+/*   Updated: 2021/09/21 10:45:30 by fmehdaou         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,7 +14,6 @@
 #define __DOG_H__
 #include "Animal.hpp"
 #include "Brain.hpp"
-
 
 class Dog : public Animal {
 

@@ -6,7 +6,7 @@
 /*   By: fmehdaou <fmehdaou@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/09/16 13:01:18 by fmehdaou          #+#    #+#             */
-/*   Updated: 2021/09/20 16:18:07 by fmehdaou         ###   ########.fr       */
+/*   Updated: 2021/09/21 13:52:47 by fmehdaou         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -31,7 +31,7 @@ class AMateria
         std::string const & getType() const;
         virtual AMateria* clone() const = 0;
         virtual void use(ICharacter& target);
-		~AMateria(void);
+		virtual ~AMateria(void);
 };
 
 #endif

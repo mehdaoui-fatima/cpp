@@ -6,7 +6,7 @@
 /*   By: fmehdaou <fmehdaou@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/09/16 14:03:41 by fmehdaou          #+#    #+#             */
-/*   Updated: 2021/09/20 10:57:52 by fmehdaou         ###   ########.fr       */
+/*   Updated: 2021/09/21 13:33:51 by fmehdaou         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -20,7 +20,7 @@ class Cure : public AMateria{
         Cure(void);
         Cure(Cure const & Cure);
         Cure& operator=(Cure const & cure);
-        Cure* clone() const;
+        AMateria* clone() const;
         void use(ICharacter& target);
         ~Cure(void); 
 };

@@ -6,7 +6,7 @@
 /*   By: fmehdaou <fmehdaou@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/09/13 17:29:34 by fmehdaou          #+#    #+#             */
-/*   Updated: 2021/09/20 18:35:27 by fmehdaou         ###   ########.fr       */
+/*   Updated: 2021/09/21 09:59:14 by fmehdaou         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,19 +19,19 @@ Animal::Animal(void)
 
 Animal::Animal(std::string type)
 {
-    std::cout << "Constractor called!" << std::endl;
+    std::cout << "Animal constractor called!" << std::endl;
     this->type = type;
 }
 
 Animal::Animal(Animal const &old_obj)
 {
-    std::cout << "Copy constructor called" << std::endl;
+    std::cout << "Animal copy constructor called" << std::endl;
     (*this) = old_obj;
 }
 
 Animal& Animal::operator=(Animal const &animal)
 {
-    std::cout << "Assignation operator called!" << std::endl;
+    std::cout << "Animal assignation operator called!" << std::endl;
     if (this != &animal)
         this->type = animal.type;
     return *this;
@@ -49,5 +49,5 @@ void Animal::makeSound(void) const
 
 Animal::~Animal(void)
 {
-    std::cout << "Destructor called" << std::cout;
+    std::cout << "Animal destructor called" << std::cout;
 }

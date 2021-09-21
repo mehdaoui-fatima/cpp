@@ -6,7 +6,7 @@
 /*   By: fmehdaou <fmehdaou@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/09/14 16:29:56 by fmehdaou          #+#    #+#             */
-/*   Updated: 2021/09/16 11:12:52 by fmehdaou         ###   ########.fr       */
+/*   Updated: 2021/09/21 10:32:04 by fmehdaou         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,7 +15,8 @@
 #include <iostream>
 #include <string>
 
-class Brain{
+class Brain {
+    
     public:
         std::string ideas[100];
     

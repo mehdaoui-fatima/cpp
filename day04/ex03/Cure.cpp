@@ -6,7 +6,7 @@
 /*   By: fmehdaou <fmehdaou@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/09/16 14:24:31 by fmehdaou          #+#    #+#             */
-/*   Updated: 2021/09/20 16:21:04 by fmehdaou         ###   ########.fr       */
+/*   Updated: 2021/09/21 13:33:46 by fmehdaou         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -28,9 +28,9 @@ Cure& Cure::operator=(Cure const & cure)
     return (*this);
 }
 
-Cure* Cure::clone() const
+AMateria* Cure::clone() const
 {
-    Cure *cure = new Cure;
+    AMateria *cure = new Cure();
     return cure;
 }
 

@@ -6,7 +6,7 @@
 /*   By: fmehdaou <fmehdaou@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/09/16 15:43:00 by fmehdaou          #+#    #+#             */
-/*   Updated: 2021/09/20 17:03:51 by fmehdaou         ###   ########.fr       */
+/*   Updated: 2021/09/21 13:51:20 by fmehdaou         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -33,9 +33,10 @@ Character& Character::operator=(Character const &character)
 {
     if (this != &character)
     {
+        this->index = character.index;
         this->name = character.name;
-        for(int i = 0; i < 4; i++)
-            this->inventory[i] = character.inventory[i];
+        for(int i = 0; i < this->index; i++)
+            this->inventory[i] = character.inventory[i]->clone();
     }  
     return (*this);
 }
@@ -56,14 +57,12 @@ void Character::equip(AMateria* m)
 
 void Character::unequip(int idx)
 {
-    int i;
-
     if (idx < 0  || idx >= this->index)
         std::cout << "index out of range!" << std::endl;
     else 
     {
         this->inventory[idx] =  NULL;
-        for(i = idx; i < this->index; i++)
+        for(int i = idx; i < this->index; i++)
             inventory[i] = inventory[i + 1];
         this->index--;
     }

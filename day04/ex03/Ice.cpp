@@ -6,7 +6,7 @@
 /*   By: fmehdaou <fmehdaou@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/09/16 13:48:19 by fmehdaou          #+#    #+#             */
-/*   Updated: 2021/09/20 16:21:32 by fmehdaou         ###   ########.fr       */
+/*   Updated: 2021/09/21 13:35:18 by fmehdaou         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -29,9 +29,9 @@ Ice& Ice::operator=(Ice const & ice)
     return (*this);
 }
 
-Ice* Ice::clone() const
+AMateria* Ice::clone() const
 {
-    Ice *ice = new Ice;
+    AMateria *ice = new Ice();
     return ice;
 }
 

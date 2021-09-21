@@ -6,7 +6,7 @@
 /*   By: fmehdaou <fmehdaou@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/09/14 16:30:12 by fmehdaou          #+#    #+#             */
-/*   Updated: 2021/09/16 10:22:06 by fmehdaou         ###   ########.fr       */
+/*   Updated: 2021/09/21 10:42:52 by fmehdaou         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -37,5 +37,4 @@ Brain& Brain::operator=(Brain const &brain)
 Brain::~Brain(void)
 {
     std::cout << "Brain destructor called" << std::endl;
-
 }
