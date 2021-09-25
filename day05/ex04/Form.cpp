@@ -6,7 +6,7 @@
 /*   By: fmehdaou <fmehdaou@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/09/23 10:07:30 by fmehdaou          #+#    #+#             */
-/*   Updated: 2021/09/24 16:27:08 by fmehdaou         ###   ########.fr       */
+/*   Updated: 2021/09/25 11:29:05 by fmehdaou         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -21,6 +21,12 @@ const char* Form::GradeTooLowException::what() const throw()
 {
     return ("Form grade too low");
 }
+
+const char* Form::FormNotSigned::what() const throw()
+{
+    return ("Form not Signed");
+}
+
 
 Form::Form(void) : _name("default"), _signed(false), _gradeSign(1), _gradeExecute(1)
 {
@@ -70,13 +76,14 @@ int Form::getGradeExecute(void) const
    return  this->_gradeExecute;
 }
 
-void Form::beSigned(Bureaucrat &b)
+void Form::beSigned(Bureaucrat const &b)
 {
 	if (b.getGrade() > _gradeSign) 
 		throw GradeTooLowException();
 	else
 		this->_signed = true;
 }
+
 
 Form::~Form(void)
 {

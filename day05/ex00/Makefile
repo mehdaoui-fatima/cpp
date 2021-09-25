@@ -6,20 +6,18 @@
 #    By: fmehdaou <fmehdaou@student.42.fr>          +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2021/09/22 11:19:43 by fmehdaou          #+#    #+#              #
-#    Updated: 2021/09/24 09:29:05 by fmehdaou         ###   ########.fr        #
+#    Updated: 2021/09/24 14:52:42 by fmehdaou         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
 
-NAME			= Form
+NAME			= Bureaucrat
 
 HEADERS			=   Bureaucrat.hpp \
-					Form.hpp
 					
 
 SRCS			=   main.cpp  \
-					Bureaucrat.cpp \
-					Form.cpp
+					Bureaucrat.cpp
 		  
 OBJS			= $(SRCS:.cpp=.o)
 
