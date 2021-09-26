@@ -6,7 +6,7 @@
 /*   By: fmehdaou <fmehdaou@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/09/22 11:19:35 by fmehdaou          #+#    #+#             */
-/*   Updated: 2021/09/24 12:01:53 by fmehdaou         ###   ########.fr       */
+/*   Updated: 2021/09/26 14:24:53 by fmehdaou         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -25,25 +25,30 @@ Bureaucrat::Bureaucrat(std::string name, int grade): _name(name), _grade(grade)
 		throw Bureaucrat::GradeTooHighException();
 }
 
-Bureaucrat::Bureaucrat(Bureaucrat const &b){
+Bureaucrat::Bureaucrat(Bureaucrat const &b)
+{
 	*this = b;
 }
 
-Bureaucrat& Bureaucrat::operator=(Bureaucrat const &b){
+Bureaucrat& Bureaucrat::operator=(Bureaucrat const &b)
+{
 	if (this != &b)
 		this->_grade = b._grade;
 	return (*this);	
 }
 
-std::string Bureaucrat::getName(void) const{
+std::string Bureaucrat::getName(void) const
+{
 	return this->_name;
 }
 
-int	Bureaucrat::getGrade(void) const{
+int	Bureaucrat::getGrade(void) const
+{
 	return this->_grade;
 }
 
-void Bureaucrat::increment(void){
+void Bureaucrat::increment(void)
+{
 	if (this->_grade <= 1)
 		throw Bureaucrat::GradeTooHighException();
 	else
@@ -67,7 +72,8 @@ const char* Bureaucrat::GradeTooLowException::what() const throw()
 	return ("Bureaucrat grade too low");
 }
 
-Bureaucrat::~Bureaucrat(void){
+Bureaucrat::~Bureaucrat(void)
+{
 	return ;
 }
 

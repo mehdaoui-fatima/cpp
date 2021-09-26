@@ -6,7 +6,7 @@
 /*   By: fmehdaou <fmehdaou@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/09/23 10:07:28 by fmehdaou          #+#    #+#             */
-/*   Updated: 2021/09/24 11:26:14 by fmehdaou         ###   ########.fr       */
+/*   Updated: 2021/09/26 14:36:39 by fmehdaou         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -20,9 +20,9 @@ class Form {
 
     private:
     	std::string const _name;
-		bool _signed;
 		const int  _gradeSign;
 		const int  _gradeExecute;
+		bool _signed;
 	
 	public:
 		class GradeTooHighException : public std::exception {

@@ -6,7 +6,7 @@
 /*   By: fmehdaou <fmehdaou@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/09/23 10:07:30 by fmehdaou          #+#    #+#             */
-/*   Updated: 2021/09/24 16:27:08 by fmehdaou         ###   ########.fr       */
+/*   Updated: 2021/09/26 14:35:51 by fmehdaou         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -22,13 +22,13 @@ const char* Form::GradeTooLowException::what() const throw()
     return ("Form grade too low");
 }
 
-Form::Form(void) : _name("default"), _signed(false), _gradeSign(1), _gradeExecute(1)
+Form::Form(void) : _name("default"), _gradeSign(1), _gradeExecute(1), _signed(false)
 {
 	return ;
 }
 
 Form::Form(std::string name, int gradSign, int gradExecute) :
-_name(name), _gradeSign(gradSign), _gradeExecute(gradExecute)
+_name(name), _gradeSign(gradSign), _gradeExecute(gradExecute), _signed(false)
 {
 	if (this->_gradeExecute < 1 || this->_gradeSign < 1)
 		throw GradeTooHighException();
@@ -37,8 +37,8 @@ _name(name), _gradeSign(gradSign), _gradeExecute(gradExecute)
 }
 
 Form::Form(Form const &form):
- _name(form._name), _signed(form._signed), _gradeSign(form._gradeSign), 
- _gradeExecute(form._gradeExecute)
+ _name(form._name), _gradeSign(form._gradeSign), 
+ _gradeExecute(form._gradeExecute), _signed(form._signed)
 {
 	*this = form;
 }
@@ -74,8 +74,7 @@ void Form::beSigned(Bureaucrat &b)
 {
 	if (b.getGrade() > _gradeSign) 
 		throw GradeTooLowException();
-	else
-		this->_signed = true;
+	this->_signed = true;
 }
 
 Form::~Form(void)
