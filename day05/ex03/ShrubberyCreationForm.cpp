@@ -6,7 +6,7 @@
 /*   By: fmehdaou <fmehdaou@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/09/24 16:37:08 by fmehdaou          #+#    #+#             */
-/*   Updated: 2021/09/25 16:54:31 by fmehdaou         ###   ########.fr       */
+/*   Updated: 2021/09/26 16:00:05 by fmehdaou         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -39,7 +39,6 @@ ShrubberyCreationForm& ShrubberyCreationForm::operator=(ShrubberyCreationForm co
     return (*this);
 }
 
-//REVIEW add action
 void ShrubberyCreationForm::execute(Bureaucrat const & executor) const
 {
     if (executor.getGrade() > this->getGradeExecute())

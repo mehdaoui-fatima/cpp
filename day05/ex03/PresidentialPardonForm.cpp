@@ -6,7 +6,7 @@
 /*   By: fmehdaou <fmehdaou@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/09/24 16:36:56 by fmehdaou          #+#    #+#             */
-/*   Updated: 2021/09/25 17:16:17 by fmehdaou         ###   ########.fr       */
+/*   Updated: 2021/09/26 15:59:39 by fmehdaou         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -37,7 +37,6 @@ PresidentialPardonForm& PresidentialPardonForm::operator=(PresidentialPardonForm
     return (*this);
 }
 
-//REVIEW add action
 void PresidentialPardonForm::execute(Bureaucrat const & executor) const
 {
     if (executor.getGrade() > this->getGradeExecute())

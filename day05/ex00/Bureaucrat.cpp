@@ -6,7 +6,7 @@
 /*   By: fmehdaou <fmehdaou@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/09/22 11:19:35 by fmehdaou          #+#    #+#             */
-/*   Updated: 2021/09/26 12:06:43 by fmehdaou         ###   ########.fr       */
+/*   Updated: 2021/09/26 15:42:45 by fmehdaou         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -35,7 +35,7 @@ Bureaucrat::Bureaucrat(std::string name, int grade) : _name(name), _grade(grade)
 		throw Bureaucrat::GradeTooHighException();
 }
 
-Bureaucrat::Bureaucrat(Bureaucrat const &b): _name(b._name), _grade(b._grade)
+Bureaucrat::Bureaucrat(Bureaucrat const &b): _name(b._name)
 {
 	*this = b;
 }

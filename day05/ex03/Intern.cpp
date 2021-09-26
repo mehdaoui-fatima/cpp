@@ -6,7 +6,7 @@
 /*   By: fmehdaou <fmehdaou@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/09/25 17:39:16 by fmehdaou          #+#    #+#             */
-/*   Updated: 2021/09/26 11:15:09 by fmehdaou         ###   ########.fr       */
+/*   Updated: 2021/09/26 16:04:52 by fmehdaou         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -45,7 +45,7 @@ Form* pardon(std::string target)
 
 Form* Intern::makeForm(std::string name, std::string formTraget)
 {
-    std::string formName[3] = {"robotomy request", "presidential pardon", " shrubbery creation"};
+    std::string formName[3] = {"robotomy request", "presidential pardon", "shrubbery creation"};
     f FormToMake[] = {robotomy, pardon, shrubbery};
 
     for (int i=0; i<3; i++)

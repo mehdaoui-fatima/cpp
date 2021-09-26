@@ -6,7 +6,7 @@
 /*   By: fmehdaou <fmehdaou@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/09/23 10:07:30 by fmehdaou          #+#    #+#             */
-/*   Updated: 2021/09/26 14:35:51 by fmehdaou         ###   ########.fr       */
+/*   Updated: 2021/09/26 15:43:53 by fmehdaou         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -38,7 +38,7 @@ _name(name), _gradeSign(gradSign), _gradeExecute(gradExecute), _signed(false)
 
 Form::Form(Form const &form):
  _name(form._name), _gradeSign(form._gradeSign), 
- _gradeExecute(form._gradeExecute), _signed(form._signed)
+ _gradeExecute(form._gradeExecute)
 {
 	*this = form;
 }

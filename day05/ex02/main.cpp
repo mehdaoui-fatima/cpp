@@ -6,7 +6,7 @@
 /*   By: fmehdaou <fmehdaou@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/09/25 14:20:42 by fmehdaou          #+#    #+#             */
-/*   Updated: 2021/09/25 17:18:50 by fmehdaou         ###   ########.fr       */
+/*   Updated: 2021/09/26 15:57:12 by fmehdaou         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,13 +19,11 @@
 
 int main()
 {
-
-
-    /*pol can sign but cannot execute [138, 146] */
+    /* pol can sign but cannot execute [138, 146] */
     /* pol cannot sign [146, 150] */
     /* pol can sign and can execute [1, 137] */
     try{
-        Bureaucrat mat("mat", 137);
+        Bureaucrat mat("mat", 10);
         ShrubberyCreationForm shrubbery("home");
         mat.signForm(shrubbery);
         mat.executeForm(shrubbery);
@@ -35,11 +33,11 @@ int main()
     }
 
 
-    /*pol can sign but cannot execute [46, 72] */
+    /* pol can sign but cannot execute [46, 72] */
     /* pol cannot sign [73, 150] */
     /* pol can sign and can execute [1,45] */
     try{
-        Bureaucrat pol("pol", 73);
+        Bureaucrat pol("pol", 6);
         RobotomyRequestForm rebotomy("wall");
         pol.signForm(rebotomy);
         pol.executeForm(rebotomy);
@@ -50,11 +48,11 @@ int main()
     }
 
 
-    /*pol can sign but cannot execute [6, 25] */
+    /* pol can sign but cannot execute [6, 25] */
     /* pol cannot sign [26, 150] */
     /* pol can sign and can execute [1,5] */
     try {
-        Bureaucrat pardon("pardon", 1);
+        Bureaucrat pardon("pardon", 5);
         PresidentialPardonForm shrubbery("sam");
         pardon.signForm(shrubbery);
         pardon.executeForm(shrubbery);
@@ -63,9 +61,5 @@ int main()
         std::cout << e.what() << std::endl;
     }
  
-    
-
- 
-
     return (0);
 }

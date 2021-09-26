@@ -6,7 +6,7 @@
 /*   By: fmehdaou <fmehdaou@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/09/26 11:05:47 by fmehdaou          #+#    #+#             */
-/*   Updated: 2021/09/26 11:22:17 by fmehdaou         ###   ########.fr       */
+/*   Updated: 2021/09/26 16:07:53 by fmehdaou         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,7 +18,7 @@ int main()
         Bureaucrat b("mat", 1);
         Intern someRandomIntern;
         Form* rrf;
-        rrf = someRandomIntern.makeForm("robotomy request", "Bender");
+        rrf = someRandomIntern.makeForm("presidential pardon", "Bender");
         if(rrf != nullptr)
         {
             rrf->beSigned(b);

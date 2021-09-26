@@ -6,7 +6,7 @@
 /*   By: fmehdaou <fmehdaou@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/09/24 16:37:03 by fmehdaou          #+#    #+#             */
-/*   Updated: 2021/09/25 16:30:35 by fmehdaou         ###   ########.fr       */
+/*   Updated: 2021/09/26 15:46:14 by fmehdaou         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,6 +15,7 @@
 RobotomyRequestForm::RobotomyRequestForm(void) :
 Form("RobotmyRequestForm", 72, 45)
 {
+    this->_target = "default";
     return ;
 }
 
@@ -37,7 +38,6 @@ RobotomyRequestForm& RobotomyRequestForm::operator=(RobotomyRequestForm const &r
     return (*this);
 }
 
-//REVIEW make sure of the imp
 void RobotomyRequestForm::execute(Bureaucrat const & executor) const
 {
     if (executor.getGrade() > this->getGradeExecute())

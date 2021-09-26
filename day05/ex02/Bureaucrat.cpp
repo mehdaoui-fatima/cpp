@@ -6,7 +6,7 @@
 /*   By: fmehdaou <fmehdaou@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/09/22 11:19:35 by fmehdaou          #+#    #+#             */
-/*   Updated: 2021/09/25 16:36:27 by fmehdaou         ###   ########.fr       */
+/*   Updated: 2021/09/26 15:56:57 by fmehdaou         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -25,7 +25,7 @@ Bureaucrat::Bureaucrat(std::string name, int grade): _name(name), _grade(grade)
 		throw Bureaucrat::GradeTooHighException();
 }
 
-Bureaucrat::Bureaucrat(Bureaucrat const &b){
+Bureaucrat::Bureaucrat(Bureaucrat const &b) : _name(b._name){
 	*this = b;
 }
 
@@ -90,7 +90,7 @@ void Bureaucrat::executeForm(Form const & form)
 	try {
 		form.execute(*this);
 	
-		std::cout << this->getName() << " executs " << form.getName();  
+		std::cout << this->getName() << " executs " << form.getName() << std::endl;  
 	} catch (std::exception &e) {
 		std::cout << e.what() << std::endl;
 	}
