@@ -6,7 +6,7 @@
 /*   By: fmehdaou <fmehdaou@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/09/22 16:39:42 by fmehdaou          #+#    #+#             */
-/*   Updated: 2021/09/24 16:25:06 by fmehdaou         ###   ########.fr       */
+/*   Updated: 2021/09/26 13:47:39 by fmehdaou         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,6 +17,7 @@ int main()
 {
     try {
         Bureaucrat mat("mat", 10);
+        std::cout << mat << std::endl;
     }
     catch(std::exception &e) {
         std::cout << e.what() << std::endl;
