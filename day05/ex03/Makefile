@@ -6,18 +6,19 @@
 #    By: fmehdaou <fmehdaou@student.42.fr>          +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2021/09/22 11:19:43 by fmehdaou          #+#    #+#              #
-#    Updated: 2021/09/25 16:25:07 by fmehdaou         ###   ########.fr        #
+#    Updated: 2021/09/26 11:13:31 by fmehdaou         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
 
-NAME			= specialForms
+NAME			= Intern
 
 HEADERS			=   Bureaucrat.hpp \
 					Form.hpp \
 					ShrubberyCreationForm.hpp \
 					RobotomyRequestForm.hpp \
-					PresidentialPardonForm.hpp
+					PresidentialPardonForm.hpp \
+					Intern.hpp
 					
 
 SRCS			=   main.cpp  \
@@ -25,7 +26,8 @@ SRCS			=   main.cpp  \
 					Form.cpp \
 					ShrubberyCreationForm.cpp \
 					RobotomyRequestForm.cpp \
-					PresidentialPardonForm.cpp
+					PresidentialPardonForm.cpp \
+					Intern.cpp
 		  
 OBJS			= $(SRCS:.cpp=.o)
 
