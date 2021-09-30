@@ -6,7 +6,7 @@
 /*   By: fmehdaou <fmehdaou@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/09/27 14:16:39 by fmehdaou          #+#    #+#             */
-/*   Updated: 2021/09/29 12:22:19 by fmehdaou         ###   ########.fr       */
+/*   Updated: 2021/09/30 17:31:35 by fmehdaou         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,10 +18,13 @@ int main(int argc, char *argv[])
     if (argc == 2)
     {
         Convert c;
-        c.parse(argv[1]);
-        std::cout << c;
+        c.defineType(argv[1]);
+        std::cout << c.getType() << std::endl;
+        c.convert(argv[1]);
+        c.printConverted();
     }
-    std::cout << "wrong number of arguments!" << std::endl;
+    else 
+        std::cout << "wrong number of arguments!" << std::endl;
     return (0);
 }
 
