@@ -6,12 +6,11 @@
 /*   By: fmehdaou <fmehdaou@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/09/27 14:16:39 by fmehdaou          #+#    #+#             */
-/*   Updated: 2021/09/30 17:31:35 by fmehdaou         ###   ########.fr       */
+/*   Updated: 2021/10/01 14:43:03 by fmehdaou         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "Convert.hpp"
-
 
 int main(int argc, char *argv[])
 {
