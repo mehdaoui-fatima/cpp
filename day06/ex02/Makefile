@@ -6,13 +6,16 @@
 #    By: fmehdaou <fmehdaou@student.42.fr>          +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2021/10/01 17:08:05 by fmehdaou          #+#    #+#              #
-#    Updated: 2021/10/01 17:08:42 by fmehdaou         ###   ########.fr        #
+#    Updated: 2021/10/02 09:07:41 by fmehdaou         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
 NAME			= Identify
-				
-SRCS			=  main.cpp  \
+
+HEADERS			= Base.hpp 
+
+SRCS			=   main.cpp  \
+					Base.cpp 
 							  
 OBJS			= $(SRCS:.cpp=.o)
 
