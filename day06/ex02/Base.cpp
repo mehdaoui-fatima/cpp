@@ -6,7 +6,7 @@
 /*   By: fmehdaou <fmehdaou@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/10/01 17:19:26 by fmehdaou          #+#    #+#             */
-/*   Updated: 2021/10/02 09:41:40 by fmehdaou         ###   ########.fr       */
+/*   Updated: 2021/10/02 11:56:42 by fmehdaou         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -38,24 +38,24 @@ void identify(Base* p)
 
 void identify(Base& p)
 {
-    BaseA pA;
-    BaseB pB;
-    BaseC pC;
+    BaseA refA;
+    BaseB refB;
+    BaseC refC;
     
     try {
-        pC = dynamic_cast<BaseC&>(p);
+        refC = dynamic_cast<BaseC&>(p);
         std::cout << "C" << std::endl;
     } catch(std::exception &e)
     {}
     
     try {
-        pB = dynamic_cast<BaseB&>(p);
+        refB = dynamic_cast<BaseB&>(p);
         std::cout << "B" << std::endl;
     }catch (std::exception &e)
     {}
     
     try {
-        BaseA pA = dynamic_cast<BaseA&>(p);
+        refA = dynamic_cast<BaseA&>(p);
         std::cout << "A" << std::endl;
     } catch (std::exception &e)
     {}

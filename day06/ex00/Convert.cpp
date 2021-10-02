@@ -1,12 +1,12 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   convert.cpp                                        :+:      :+:    :+:   */
+/*   Convert.cpp                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: fmehdaou <fmehdaou@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/09/29 10:21:07 by fmehdaou          #+#    #+#             */
-/*   Updated: 2021/10/01 15:30:23 by fmehdaou         ###   ########.fr       */
+/*   Updated: 2021/10/02 10:34:44 by fmehdaou         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -78,7 +78,6 @@ void    Convert::printDouble()
 
 void Convert::printConverted()
 {
-    
     if(type == "invalidType")
         return ;
     printChar();
@@ -149,6 +148,7 @@ void Convert::defineType(std::string line)
     else if (len == 1 && !isnumber(line[0]))
     {
          this->type = "char";
+         this->precision = 1;
          return ;
     }
     else if (line[0] == '+' || line[0] == '-')
@@ -172,10 +172,7 @@ void Convert::defineType(std::string line)
         }
     }
     if(this->type == "double" || this->type == "float")
-    {
         this->precision = line.size() - sp_index - (this->type == "float" ? 2 : 1);
-        std::cout << this->precision << std::endl;
-    }
     if(this->precision == 0)
         this->precision = 1;
 }
