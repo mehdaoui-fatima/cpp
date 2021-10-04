@@ -6,18 +6,17 @@
 /*   By: fmehdaou <fmehdaou@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/10/04 11:16:31 by fmehdaou          #+#    #+#             */
-/*   Updated: 2021/10/04 13:27:47 by fmehdaou         ###   ########.fr       */
+/*   Updated: 2021/10/04 18:02:45 by fmehdaou         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#ifndef __ITER__HPP
-#define __ITER__HPP
-
+#ifndef ITER_HPP
+#define ITER_HPP
 #include <iostream>
 #include <string>
 
 template<typename T>
-void print(T const &n)
+void print_(T const &n)
 {
     std::cout << n << '|';
 }
@@ -30,6 +29,5 @@ void	iter(T *tab, int len, void func(T const &n))
 		func(tab[i]);
 	}
 }
-
 
 #endif
