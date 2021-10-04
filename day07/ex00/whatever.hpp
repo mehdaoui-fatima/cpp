@@ -6,7 +6,7 @@
 /*   By: fmehdaou <fmehdaou@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/10/04 10:41:06 by fmehdaou          #+#    #+#             */
-/*   Updated: 2021/10/04 11:12:32 by fmehdaou         ###   ########.fr       */
+/*   Updated: 2021/10/04 16:50:45 by fmehdaou         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -28,9 +28,7 @@ T const& max(T const &x, T const &y)
 template<typename T>
 void swap(T &x, T &y) 
 {
-    T tmp;
-
-    tmp = x;
+    T tmp(x);
     x = y ;
     y = tmp;
 }
