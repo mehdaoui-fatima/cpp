@@ -6,7 +6,7 @@
 /*   By: fmehdaou <fmehdaou@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/10/04 08:15:29 by fmehdaou          #+#    #+#             */
-/*   Updated: 2021/10/04 16:02:53 by fmehdaou         ###   ########.fr       */
+/*   Updated: 2021/10/04 18:22:54 by fmehdaou         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -63,3 +63,11 @@ int main(int, char**)
     delete [] mirror;//
     return 0;
 }
+
+
+// int main()
+// {
+//     int * a = new int();
+//     std::cout << *a << std::endl;
+//     return (0);
+// }
