@@ -1,34 +1,38 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   easyfind.hpp                                       :+:      :+:    :+:   */
+/*   span.hpp                                           :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: fmehdaou <fmehdaou@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2021/10/05 12:31:47 by fmehdaou          #+#    #+#             */
-/*   Updated: 2021/10/05 17:40:31 by fmehdaou         ###   ########.fr       */
+/*   Created: 2021/10/05 17:43:35 by fmehdaou          #+#    #+#             */
+/*   Updated: 2021/10/05 17:58:14 by fmehdaou         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#ifndef EASYFIND_HPP
-#define EASYFIND_HPP
+#ifndef SPAN_HPP
+#define SPAN_HPP
 #include<iostream>
-#include<iterator>
-#include<vector>
+#include<string>
+
+class Span {
+    
+    private:
+        int *arr;
+        unsigned int index;
+        
+    public:
+        Span(void);
+        Span(unsigned int N);
+        Span(Span const &span);
+        Span operator=(Span const &span);
 
 
-//NOTE assume that the T is a container of int 
-template<typename T>
-int easyfind(T ar, int const &n)
-{
-    typename T::iterator iter;
-    for(iter =  ar.begin(); iter != ar.end() ; iter++)
-    {
-        if (*iter == n)
-            return (*iter);
-    }
-    return (-1);
-}
+        void addNumber(int n);
+        // shortestSpan
+        //longestSpan
+        //exceptions
 
-#endif
- /* EASYFIND_HPP */
+        ~Span(void);
+};
+#endif 

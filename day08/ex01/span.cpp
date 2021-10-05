@@ -1,22 +1,36 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   main.cpp                                           :+:      :+:    :+:   */
+/*   span.cpp                                           :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: fmehdaou <fmehdaou@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2021/10/05 12:19:35 by fmehdaou          #+#    #+#             */
-/*   Updated: 2021/10/05 17:41:49 by fmehdaou         ###   ########.fr       */
+/*   Created: 2021/10/05 17:48:01 by fmehdaou          #+#    #+#             */
+/*   Updated: 2021/10/05 17:56:13 by fmehdaou         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "easyfind.hpp"
-int main()
+#include "span.hpp"
+
+
+Span::Span(void)
 {
-    std::vector<int> arr;
-    arr.push_back(10);
-    arr.push_back(42);
-    arr.push_back(13);
-    std::cout << easyfind(arr, 13);
-    return (0);
+    return ;
+}
+
+Span::Span(unsigned int N)
+{
+    arr = new int[N];
+}
+
+// Span(Span const &span);
+// Span operator=(Span const &span);
+
+
+
+
+
+Span::~Span(void)
+{
+    return ;
 }
