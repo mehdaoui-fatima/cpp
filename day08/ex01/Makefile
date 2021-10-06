@@ -6,16 +6,17 @@
 #    By: fmehdaou <fmehdaou@student.42.fr>          +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2021/10/05 17:42:54 by fmehdaou          #+#    #+#              #
-#    Updated: 2021/10/05 17:43:02 by fmehdaou         ###   ########.fr        #
+#    Updated: 2021/10/06 10:58:46 by fmehdaou         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
 
-NAME			= span
+NAME			= Span
 
-HEADERS			=  span.hpp \
+HEADERS			=  Span.hpp \
 					
-SRCS			=   main.cpp  \
+SRCS			=  main.cpp  \
+				   Span.cpp
 		  
 OBJS			= $(SRCS:.cpp=.o)
 
