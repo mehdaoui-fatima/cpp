@@ -6,7 +6,7 @@
 /*   By: fmehdaou <fmehdaou@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/10/05 17:48:01 by fmehdaou          #+#    #+#             */
-/*   Updated: 2021/10/06 13:55:43 by fmehdaou         ###   ########.fr       */
+/*   Updated: 2021/10/06 15:17:11 by fmehdaou         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -55,8 +55,24 @@ void Span::printSpan(void){
 	std::cout << std::endl;
 }
 
-// Span(Span const &span);
-// Span operator=(Span const &span);
+Span::Span(Span const &span)
+{
+	(*this) = span;
+}
+
+Span Span::operator=(Span const &span)
+{
+	if (this != &span)
+	{
+		delete [] arr;
+		this->arr = new int[N];
+		for(unsigned int i = 0; i < N; i++)
+			this->arr[i] =  span.arr[i];
+		this->index = span.index;
+		this->N = span.N;
+	}
+	return (*this);
+}
 
 int Span::shortestSpan(){
 
