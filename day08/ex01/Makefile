@@ -1,17 +1,16 @@
 # **************************************************************************** #
 #                                                                              #
 #                                                         :::      ::::::::    #
-#    Makefile                                           :+:      :+:    :+:    #
+#    makefile                                           :+:      :+:    :+:    #
 #                                                     +:+ +:+         +:+      #
 #    By: fmehdaou <fmehdaou@student.42.fr>          +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
-#    Created: 2021/10/05 17:42:54 by fmehdaou          #+#    #+#              #
-#    Updated: 2021/10/06 10:58:46 by fmehdaou         ###   ########.fr        #
+#    Created: 2021/10/06 16:14:12 by fmehdaou          #+#    #+#              #
+#    Updated: 2021/10/06 16:55:37 by fmehdaou         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
-
-NAME			= Span
+NAME			= span
 
 HEADERS			=  Span.hpp \
 					
@@ -25,7 +24,7 @@ FLAGS			= -Wall -Wextra -Werror
 RM				= rm -rf 
 
 %.o : %.cpp $(HEADERS)
-	@clang++ ${FLAGS} -o $@ -c $<
+		@clang++ ${FLAGS} -o $@ -c $<
 
 .PHONY: clean bonus fclean all re
 

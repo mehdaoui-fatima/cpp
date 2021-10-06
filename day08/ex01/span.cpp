@@ -6,53 +6,65 @@
 /*   By: fmehdaou <fmehdaou@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/10/05 17:48:01 by fmehdaou          #+#    #+#             */
-/*   Updated: 2021/10/06 15:17:11 by fmehdaou         ###   ########.fr       */
+/*   Updated: 2021/10/06 18:32:58 by fmehdaou         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "Span.hpp"
 
-const char	*Span::FullArrayException::what() const throw(){
-    return ("Index out of range");
-}
-
-const char* Span::EmptyArrayException::what() const throw(){
-	return ("Can't add nmbers no an empty array");
+const char* Span::SizeNotAllowedException::what() const throw(){
+	return ("the size should be positive");
 }
 
 const char* Span::NoSpanException::what() const throw(){
 	return ("No Span found");
+}
+const char* Span::FullVectorException::what() const throw(){
+	return ("Size limit reached");
 }
 
 Span::Span(void){
 	return ;
 }
 
-Span::Span(unsigned int N){
-	
-	if (static_cast<int>(N) >= 0)
+//NOTE: only pos n accepted
+Span::Span(unsigned int N)
+{
+	if (static_cast<int>(N) < 0)
+		throw SizeNotAllowedException();
+	this->_N = N;
+}
+
+void Span::addNumber(const int &n)
+{
+	if (this->_v.size()  + 1 > this->_N)
+		throw FullVectorException();
+	this->_v.push_back(n);
+}
+
+int Span::longestSpan(void)
+{
+	if (this->_v.size() < 2)
+		throw NoSpanException();
+	return 
+		(*std::max_element(_v.begin(), _v.end()) -
+			 *std::min_element(_v.begin(), _v.end()));
+}
+
+int Span::shortestSpan(void)
+{
+	size_t min = INT_MAX;
+	size_t x = 0;
+	if (this->_v.size() < 2)
+		throw NoSpanException();
+	std::sort(this->_v.begin(), this->_v.end());
+	for(size_t i = 0; i < _v.size() - 1; i++)
 	{
-		arr = new int[N]();
-		this->index = 0;
-		this->N = N;
-	}
-	else
-		this->N = 0;
-}
-
-void Span::addNumber(int n){
-	if (this->N == 0)
-		throw EmptyArrayException();
-	else if (index >= this->N)
-		throw FullArrayException();
-	else
-		this->arr[index++] = n;
-}
-
-void Span::printSpan(void){
-	for(unsigned int i = 0; i < this->index; i++)
-		std::cout << this->arr[i] << '|';
-	std::cout << std::endl;
+		x = _v[i + 1] - _v[i];
+		if ( x < min)
+			min = x;
+	}	
+	return (min);
 }
 
 Span::Span(Span const &span)
@@ -62,45 +74,24 @@ Span::Span(Span const &span)
 
 Span Span::operator=(Span const &span)
 {
-	if (this != &span)
+	if(this != &span)
 	{
-		delete [] arr;
-		this->arr = new int[N];
-		for(unsigned int i = 0; i < N; i++)
-			this->arr[i] =  span.arr[i];
-		this->index = span.index;
-		this->N = span.N;
+		this->_N = span._N;
+		this->_v = span._v;
 	}
 	return (*this);
 }
 
-int Span::shortestSpan(){
 
-	if(this->index == 0 || this->index == 1)
-		throw NoSpanException();
-	int *tmp = new int[index / 2];
-	for (unsigned int i = 0; i < index/ 2; i++)
-	{
-		std::sort(arr, arr + index);
-		tmp[i] =  arr[i + 1] - arr[i];
-	}
-	std::sort(tmp, tmp + (index/2));
-	delete[] tmp;
-	return (tmp[0]);
-}
-
-int Span::longestSpan(){
-	if (this->index == 1 || this->index == 0)
-		throw NoSpanException();
-	else 
-	{
-		std::sort(arr, arr + this->index);
-		return (arr[this->index - 1] -  arr[0]);
-	}
+void Span::printSpan(void)
+{
+	std::vector<int>::iterator iter;
+	for (size_t i=0; i < _v.size(); i++)
+		std::cout << _v[i] << " | ";
+	std::cout << std::endl;
 }
 
 Span::~Span(void)
 {
-	delete[] arr;
-    return ;
+	return ;
 }

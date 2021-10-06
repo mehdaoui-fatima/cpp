@@ -6,7 +6,7 @@
 /*   By: fmehdaou <fmehdaou@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/10/05 17:43:35 by fmehdaou          #+#    #+#             */
-/*   Updated: 2021/10/06 13:29:53 by fmehdaou         ###   ########.fr       */
+/*   Updated: 2021/10/06 18:27:08 by fmehdaou         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,20 +15,19 @@
 #include<iostream>
 #include<string>
 #include<algorithm>
-
+#include<vector>
 class Span {
     
     private:
-        int *arr;
-        unsigned int N;
-        unsigned int index;
+        std::vector<int> _v;
+        unsigned int _N;
         Span(void);
         
     public:
-        class FullArrayException : public std::exception{
+        class SizeNotAllowedException : public std::exception{
             virtual const char *what() const throw();
         };
-        class EmptyArrayException : public std::exception{
+        class FullVectorException : public std::exception{
             virtual const char *what() const throw();
         };
         class NoSpanException : public std::exception{
@@ -37,9 +36,16 @@ class Span {
         Span(unsigned int N);
         Span(Span const &span);
         Span operator=(Span const &span);
-        void addNumber(int n);
+        void addNumber(const int &n);
+        template <typename Iter>
+        void addNumber(Iter begin, Iter end)
+        {
+            if (end - begin + this->_v.size() > this->_N)
+                throw FullVectorException();
+            this->_v.insert(this->_v.end() , begin, end);
+        }
         int shortestSpan();
-        int longestSpan();
+        int longestSpan(void);
         void printSpan(void);
         ~Span(void);
 };
