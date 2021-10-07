@@ -6,11 +6,11 @@
 /*   By: fmehdaou <fmehdaou@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/10/05 17:48:01 by fmehdaou          #+#    #+#             */
-/*   Updated: 2021/10/06 18:32:58 by fmehdaou         ###   ########.fr       */
+/*   Updated: 2021/10/07 08:16:06 by fmehdaou         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "Span.hpp"
+#include "span.hpp"
 
 const char* Span::SizeNotAllowedException::what() const throw(){
 	return ("the size should be positive");
