@@ -6,7 +6,7 @@
 /*   By: fmehdaou <fmehdaou@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/10/05 17:43:35 by fmehdaou          #+#    #+#             */
-/*   Updated: 2021/10/06 18:27:08 by fmehdaou         ###   ########.fr       */
+/*   Updated: 2021/10/07 14:03:08 by fmehdaou         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,6 +16,8 @@
 #include<string>
 #include<algorithm>
 #include<vector>
+
+
 class Span {
     
     private:

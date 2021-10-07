@@ -6,7 +6,7 @@
 /*   By: fmehdaou <fmehdaou@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/10/05 12:31:47 by fmehdaou          #+#    #+#             */
-/*   Updated: 2021/10/05 17:40:31 by fmehdaou         ###   ########.fr       */
+/*   Updated: 2021/10/07 13:29:35 by fmehdaou         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,19 +16,19 @@
 #include<iterator>
 #include<vector>
 
+class NovalueFoundException : public std::exception {
+	virtual const char *what() const throw(){
+		return "No matched value found";
+	}
+};
 
-//NOTE assume that the T is a container of int 
 template<typename T>
-int easyfind(T ar, int const &n)
+void easyfind(T ar, int const &n)
 {
-    typename T::iterator iter;
-    for(iter =  ar.begin(); iter != ar.end() ; iter++)
-    {
-        if (*iter == n)
-            return (*iter);
-    }
-    return (-1);
+	if (std::find(ar.begin(), ar.end(), n) != ar.end())
+		std::cout << "value found" << std::endl;
+	else
+		throw NovalueFoundException();
 }
 
 #endif
- /* EASYFIND_HPP */
